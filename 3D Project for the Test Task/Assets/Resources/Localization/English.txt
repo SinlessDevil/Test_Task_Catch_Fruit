@@ -1,7 +1,7 @@
 changelang	Change Language
 playy	Play
 ext	Exit
-exittomenu	Exit to MeinMenu
+exittomenu	Exit to Main Menu
 restart	Restart
 gameover	GameOver
 youwin	You Win!

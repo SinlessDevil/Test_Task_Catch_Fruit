@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ConveyorSpritesAtlas
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 8
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 0
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: 2800000, guid: dc3c9ac77c286e14699f09bbfc25d3b7, type: 3}
+    - {fileID: 2800000, guid: 736c9ce70ef365a4c961400e2d5e5d4b, type: 3}
+    - {fileID: 2800000, guid: 04d2bbbecaae46d448c454b59094af07, type: 3}
+    - {fileID: 2800000, guid: e16b3d0fa01f1d5418fed52e49097bdc, type: 3}
+    - {fileID: 2800000, guid: 75ae8151579137b42aa3713f9ccc2f35, type: 3}
+    - {fileID: 2800000, guid: 50e8560999fba5d4da07740ff0b7b728, type: 3}
+    - {fileID: 2800000, guid: dc3c9ac77c286e14699f09bbfc25d3b7, type: 3}
+    - {fileID: 2800000, guid: 86256588aec8bf4428c20d137c32e5ab, type: 3}
+    - {fileID: 2800000, guid: 8c5ea308f51c1ef4680d2abfc7504fcf, type: 3}
+    - {fileID: 2800000, guid: f058f7855b95f8e4bb0b9855b0f32647, type: 3}
+    - {fileID: 2800000, guid: 5d0ab84e0822a2947b1d3496716d29c8, type: 3}
+    - {fileID: 2800000, guid: cce806a219fc704479ea8a75868f17b9, type: 3}
+    - {fileID: 2800000, guid: bccd140e300ea1b4a9b5a5768d33c76b, type: 3}
+    - {fileID: 2800000, guid: 23f0c4730e133014abbce971dcabb4fb, type: 3}
+    - {fileID: 2800000, guid: 1ad845a9b453ef4408abbdc870d62ae5, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: 21300000, guid: 75ae8151579137b42aa3713f9ccc2f35, type: 3}
+  - {fileID: 21300000, guid: cce806a219fc704479ea8a75868f17b9, type: 3}
+  - {fileID: 21300000, guid: 23f0c4730e133014abbce971dcabb4fb, type: 3}
+  - {fileID: 21300000, guid: f058f7855b95f8e4bb0b9855b0f32647, type: 3}
+  - {fileID: 21300000, guid: dc3c9ac77c286e14699f09bbfc25d3b7, type: 3}
+  - {fileID: 21300000, guid: 736c9ce70ef365a4c961400e2d5e5d4b, type: 3}
+  - {fileID: 21300000, guid: 8c5ea308f51c1ef4680d2abfc7504fcf, type: 3}
+  - {fileID: 21300000, guid: 86256588aec8bf4428c20d137c32e5ab, type: 3}
+  - {fileID: 21300000, guid: 50e8560999fba5d4da07740ff0b7b728, type: 3}
+  - {fileID: 21300000, guid: 1ad845a9b453ef4408abbdc870d62ae5, type: 3}
+  - {fileID: 21300000, guid: bccd140e300ea1b4a9b5a5768d33c76b, type: 3}
+  - {fileID: 21300000, guid: 5d0ab84e0822a2947b1d3496716d29c8, type: 3}
+  - {fileID: 21300000, guid: 04d2bbbecaae46d448c454b59094af07, type: 3}
+  - {fileID: 21300000, guid: e16b3d0fa01f1d5418fed52e49097bdc, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Arrow_on_Conveyor_Belt
+  - Wood_Basket2
+  - "\u0421urbs_\u0421onveyor_Belt"
+  - Strawberry
+  - Left_Conveyor
+  - BG_Conveyor_Belt
+  - Right_Conveyor
+  - Orange
+  - "Center_\u0421onveyor"
+  - "Center_\u0421onveyor-001"
+  - "\u0421onveyor_belt"
+  - Wood_Basket1
+  - Banana
+  - Apple
+  m_RenderDataMap: {}
+  m_Tag: ConveyorSpritesAtlas
+  m_IsVariant: 0

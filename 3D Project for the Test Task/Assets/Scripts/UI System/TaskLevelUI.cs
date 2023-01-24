@@ -10,6 +10,7 @@ namespace UISystem
         [SerializeField] private Image _progressFruitFillBarImage;
         private Level _level;
         private int _maxAmounFruit;
+        private float _currentAmountFruit;
         private int _offsetFillBar = 0;
 
         private void Awake()
@@ -36,7 +37,8 @@ namespace UISystem
         private void UpdateProgressFruit(int value)
         {
             _offsetFillBar = value;
-            float val = ((float)_offsetFillBar / (float)_maxAmounFruit);
+            float val = _currentAmountFruit + ((float)_offsetFillBar / (float)_maxAmounFruit);
+            _currentAmountFruit += val;
             _progressFruitFillBarImage.DOFillAmount(val, 0.4f);
         }
     }

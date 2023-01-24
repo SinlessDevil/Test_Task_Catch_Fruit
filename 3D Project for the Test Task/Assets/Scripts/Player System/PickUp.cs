@@ -145,6 +145,7 @@ namespace PlayerSystem
             _lastFruit.SetTransfromPosition(_seatsInCart[0]);
             _seatsInCart.RemoveAt(0);
 
+            _lastFruit.enabled = false;
             _lastFruit = null;
 
             _level.ApplyNewProgressFruit(1);
@@ -157,6 +158,7 @@ namespace PlayerSystem
             _lastFruit.gameObject.transform.SetParent(_environment.transform);
             _lastFruit.SetKinimaticRigidBody(false);
 
+            _lastFruit.enabled = false;
             _lastFruit = null;
 
             _level.ApplyNewHealth(1);

@@ -8,12 +8,14 @@ namespace UISystem.UIGamePlay.InteractivePanel
     {
         protected void RestartThisScene()
         {
+            Time.timeScale = 1f;
             AudioClips.Instance.PlayClip(DictionaruSounds.STR_AUDIO_CLIP_BUTTON_CLIKC);
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
         protected void ExitToMeinMenu()
         {
+            Time.timeScale = 1f;
             AudioClips.Instance.PlayClip(DictionaruSounds.STR_AUDIO_CLIP_BUTTON_CLIKC);
             SceneManager.LoadScene(0);
         }

@@ -2537,6 +2537,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7057624402744297589}
   - component: {fileID: 3968116388682142223}
+  - component: {fileID: 4944778867052984809}
+  - component: {fileID: 2256917621573934430}
   - component: {fileID: 2949811414967775540}
   m_Layer: 0
   m_Name: '[MAIN CHARACTER]'
@@ -2584,6 +2586,40 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4944778867052984809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7690574404870443727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 938fd57dac7c8414fa97c340c73218d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2256917621573934430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7690574404870443727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fb600d6143ab4349b415a2b826e5aea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _level: {fileID: 0}
+  _pickUp: {fileID: 0}
+  _animation: {fileID: 0}
+  _widgetProgressValuePrefab: {fileID: 0}
+  _progressValueContainer: {fileID: 0}
+  _colorHealth: {r: 0, g: 0, b: 0, a: 0}
+  _colorProgress: {r: 0, g: 0, b: 0, a: 0}
+  _cart: {fileID: 0}
+  _environment: {fileID: 0}
+  _seatsInCart: []
 --- !u!114 &2949811414967775540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2597,18 +2633,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _level: {fileID: 0}
-  _widgetProgressValuePrefab: {fileID: 4022511498651801444, guid: f51a00bb05388cf48883ad5a7a4988dc, type: 3}
-  _progressValueContainer: {fileID: 0}
-  _colorHealth: {r: 0.735849, g: 0, b: 0, a: 1}
-  _colorProgress: {r: 0, g: 0.735849, b: 0.117590465, a: 1}
   _mainTargetPickUp: {fileID: 0}
   _rig: {fileID: 0}
   _weightSpeed: 3
-  _envoronment: {fileID: 0}
   _rightPalm: {fileID: 0}
   _touchPos: {fileID: 0}
-  _dropPos: {fileID: 0}
-  _seatsInCart: []
+  currentFruit: {fileID: 0}
 --- !u!1 &7797687269344254563
 GameObject:
   m_ObjectHideFlags: 0

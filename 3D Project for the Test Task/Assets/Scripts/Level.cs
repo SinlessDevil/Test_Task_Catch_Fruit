@@ -1,10 +1,11 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using UISystem.UIGamePlay;
 using SoundSystem;
-using FruitSystem;
+using TaskSystem;
 
 public class Level : MonoBehaviour
 {
@@ -19,10 +20,10 @@ public class Level : MonoBehaviour
     [SerializeField] private GameObject _notAnInteractivePanel;
     [SerializeField] private GameObject _buttonStartGame;
     [Space(10)]
-    [Header("------------ Setting Current Task --------------")]
-    [SerializeField] private TypeFruit _currentTypeFruit;
-    [SerializeField] private int _currentAmountFruit;
+    [Header("------------ Current Task --------------")]
+    [SerializeField] private int _currentTotalAmountFruits;
     [SerializeField] private int _currentAmountHealth;
+    [SerializeField] public List<Task> currentTasks;
 
     private void Start()
     {
@@ -53,16 +54,14 @@ public class Level : MonoBehaviour
 
         FadeAtStart();
     }
-
     private void FadeAtStart()
     {
         _fadeImage.DOFade(0f, 1.3f).From(1f);
     }
-
-    private void SetCurrentTask(TypeFruit type, int amountFruit,int amountHealth)
+    private void SetCurrentTask(List<Task> tasks, int amountFruits, int amountHealth)
     {
-        _currentTypeFruit = type;
-        _currentAmountFruit = amountFruit;
+        currentTasks = tasks;
+        _currentTotalAmountFruits = amountFruits;
         _currentAmountHealth = amountHealth;
     }
     #endregion
@@ -70,17 +69,12 @@ public class Level : MonoBehaviour
     #region Methods Get Current Setting Task 
     public int GetCurrentAmountFruit()
     {
-        return _currentAmountFruit;
+        return _currentTotalAmountFruits;
     }
 
     public int GetCurrentAmountHealth()
     {
         return _currentAmountHealth;
-    }
-
-    public TypeFruit GetTypeFruit()
-    {
-        return _currentTypeFruit;
     }
     #endregion
 
@@ -88,24 +82,27 @@ public class Level : MonoBehaviour
     public void ApplyNewProgressFruit(int value)
     {
         OnProgressFruitChangeEvent?.Invoke(value);
-        _currentAmountFruit -= value;
-        if (_currentAmountFruit <= 0)
-        {
+
+        _currentTotalAmountFruits -= value;
+        if (_currentTotalAmountFruits <= 0)
             OnWinGameEvent?.Invoke();
-            Debug.Log("WinGame");
-        }
+
+        CheckingAssignments();
     }
 
     public void ApplyNewHealth(int value)
     {
         OnHealthChangeEvent?.Invoke(value);
+
         _currentAmountHealth -= value;
         if (_currentAmountHealth <= 0)
-        {
             OnGameOverEvent?.Invoke();
-            Debug.Log("GameOver");
-        }
     }
 
+    private void CheckingAssignments()
+    {
+        for (int i = 0; i < currentTasks.Count; i++)
+            if (currentTasks[i].amountFruit == 0) currentTasks.RemoveAt(i);
+    }
     #endregion
 }

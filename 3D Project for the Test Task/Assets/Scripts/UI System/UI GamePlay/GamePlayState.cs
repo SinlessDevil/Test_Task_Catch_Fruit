@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using PlayerSystem.StateAnimation;
 using DG.Tweening;
 using SoundSystem;
 
@@ -18,6 +19,8 @@ namespace UISystem.UIGamePlay
         [Space(10)]
         [Header("----------------- ENVIRONMENT ------------------")]
         [SerializeField] private GameObject[] _objectEnvironment;
+        [Space(10)]
+        [SerializeField] private CharacterAnimation _animation;
 
 
         private void Awake()
@@ -30,18 +33,20 @@ namespace UISystem.UIGamePlay
 
         private void OnEnable()
         {
-            Level.OnWinGameEvent += ShowWinGamePanle;
-            Level.OnGameOverEvent += ShowGameOvePanel;
+            Level.OnWinGameEvent += WinGame;
+            Level.OnGameOverEvent += GameOver;
         }
 
         private void OnDisable()
         {
-            Level.OnWinGameEvent -= ShowWinGamePanle;
-            Level.OnGameOverEvent -= ShowGameOvePanel;
+            Level.OnWinGameEvent -= WinGame;
+            Level.OnGameOverEvent -= GameOver;
         }
 
-        private void ShowWinGamePanle()
+        private void WinGame()
         {
+            _animation.SetBehaviorDancesWinGame();
+
             ShowPanel(_winGamePanel);
             AudioClips.Instance.PlayClip(DictionaruSounds.STR_AUDIO_CLIP_YOU_WIN_TWO);
 
@@ -58,8 +63,10 @@ namespace UISystem.UIGamePlay
             AudioClips.Instance.PlayClip(DictionaruSounds.STR_AUDIO_CLIP_YOU_WIN);
         }
 
-        private void ShowGameOvePanel()
+        private void GameOver()
         {
+            _animation.SetBehaviorDancesGameOver();
+
             ShowPanel(_gameOverPanel);
             AudioClips.Instance.PlayClip(DictionaruSounds.STR_AUDIO_CLIP_GAME_OVER);
 

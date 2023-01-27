@@ -47,6 +47,8 @@ SpriteAtlas:
     - {fileID: 2800000, guid: bccd140e300ea1b4a9b5a5768d33c76b, type: 3}
     - {fileID: 2800000, guid: 23f0c4730e133014abbce971dcabb4fb, type: 3}
     - {fileID: 2800000, guid: 1ad845a9b453ef4408abbdc870d62ae5, type: 3}
+    - {fileID: 2800000, guid: b53bfe6d0de116a4eb8038ec01fddc5b, type: 3}
+    - {fileID: 2800000, guid: 853f91d583648114f9ae7dc9e30cd975, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -56,12 +58,14 @@ SpriteAtlas:
   - {fileID: 21300000, guid: cce806a219fc704479ea8a75868f17b9, type: 3}
   - {fileID: 21300000, guid: 23f0c4730e133014abbce971dcabb4fb, type: 3}
   - {fileID: 21300000, guid: f058f7855b95f8e4bb0b9855b0f32647, type: 3}
+  - {fileID: 21300000, guid: 853f91d583648114f9ae7dc9e30cd975, type: 3}
   - {fileID: 21300000, guid: dc3c9ac77c286e14699f09bbfc25d3b7, type: 3}
   - {fileID: 21300000, guid: 736c9ce70ef365a4c961400e2d5e5d4b, type: 3}
   - {fileID: 21300000, guid: 8c5ea308f51c1ef4680d2abfc7504fcf, type: 3}
   - {fileID: 21300000, guid: 86256588aec8bf4428c20d137c32e5ab, type: 3}
   - {fileID: 21300000, guid: 50e8560999fba5d4da07740ff0b7b728, type: 3}
   - {fileID: 21300000, guid: 1ad845a9b453ef4408abbdc870d62ae5, type: 3}
+  - {fileID: 21300000, guid: b53bfe6d0de116a4eb8038ec01fddc5b, type: 3}
   - {fileID: 21300000, guid: bccd140e300ea1b4a9b5a5768d33c76b, type: 3}
   - {fileID: 21300000, guid: 5d0ab84e0822a2947b1d3496716d29c8, type: 3}
   - {fileID: 21300000, guid: 04d2bbbecaae46d448c454b59094af07, type: 3}
@@ -71,12 +75,14 @@ SpriteAtlas:
   - Wood_Basket2
   - "\u0421urbs_\u0421onveyor_Belt"
   - Strawberry
+  - Avocado
   - Left_Conveyor
   - BG_Conveyor_Belt
   - Right_Conveyor
-  - Orange
+  - Peach
   - "Center_\u0421onveyor"
   - "Center_\u0421onveyor-001"
+  - Cherries
   - "\u0421onveyor_belt"
   - Wood_Basket1
   - Banana

@@ -5,6 +5,15 @@ namespace PlayerSystem
 {
     public class TouchScreen : MonoBehaviour
     {
+        #region TypePlatrom
+        public enum TypePlaform
+        {
+            Android,
+            PC
+        }
+        public TypePlaform typePlatrom;
+        #endregion
+
         [SerializeField] private float _rayLanght;
         [SerializeField] private LayerMask _layermask;
         [SerializeField] private PickUp _pickUp;
@@ -28,12 +37,12 @@ namespace PlayerSystem
 
         private void OnEnable()
         {
-            PickUp.OnTouchScreenInteractiveEvent += SetTouchScreen;
+            Put.OnTouchScreenInteractiveEvent += SetTouchScreen;
         }
 
         private void OnDisable()
         {
-            PickUp.OnTouchScreenInteractiveEvent -= SetTouchScreen;
+            Put.OnTouchScreenInteractiveEvent -= SetTouchScreen;
         }
 
         private void SetTouchScreen(bool isInteractive)
@@ -45,25 +54,48 @@ namespace PlayerSystem
         {
             if (_isInteractive)
             {
-                //Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject()
-                if (Input.touchCount > 0)
+                switch (typePlatrom)
                 {
-                    _touch = Input.GetTouch(0);
-                    _ray = Camera.main.ScreenPointToRay(_touch.position);
-                    //_ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                    case TypePlaform.Android:
+                        AndroidControl();
+                        break;
+                    case TypePlaform.PC:
+                        PcControl();
+                        break;
+                }
+            }
+        }
 
-                    Debug.DrawRay(_ray.origin, _ray.direction * 20, Color.red);
+        #region Methods Control
+        private void AndroidControl(){
+            if (Input.touchCount > 0){
+                _touch = Input.GetTouch(0);
+                _ray = Camera.main.ScreenPointToRay(_touch.position);
 
-                    if (Physics.Raycast(_ray, out _hit, _rayLanght, _layermask))
-                    {
-                        if (_hit.collider.TryGetComponent(out FruitSystem.Fruit fruit))
-                        {
-                            _isInteractive = false;
-                            fruit.Accept(_pickUp);
-                        }
+                Debug.DrawRay(_ray.origin, _ray.direction * 20, Color.red);
+
+                if (Physics.Raycast(_ray, out _hit, _rayLanght, _layermask)){
+                    if (_hit.collider.TryGetComponent(out FruitSystem.Fruit fruit)){
+                        _isInteractive = false;
+                        fruit.Accept(_pickUp);
                     }
                 }
             }
         }
+        private void PcControl(){
+            if (Input.GetMouseButtonDown(0) && !EventSystem.current.IsPointerOverGameObject()){
+                _ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+                Debug.DrawRay(_ray.origin, _ray.direction * 20, Color.red);
+
+                if (Physics.Raycast(_ray, out _hit, _rayLanght, _layermask)){
+                    if (_hit.collider.TryGetComponent(out FruitSystem.Fruit fruit)){
+                        _isInteractive = false;
+                        fruit.Accept(_pickUp);
+                    }
+                }
+            }
+        }
+        #endregion
     }
 }

@@ -5,6 +5,8 @@ namespace FruitSystem
         Apple,
         Banana,
         Peach,
-        Strawberry
+        Strawberry,
+        Avocado,
+        Cherries
     }
 }

@@ -75,7 +75,7 @@ namespace UISystem
         {
             AudioClips.Instance.PlayClip(DictionaruSounds.STR_AUDIO_CLIP_BUTTON_CLIKC);
 
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSecondsRealtime(0.1f);
 
             if (_isActive) _iconSound.sprite = _soundActiveIsFalse;
             else _iconSound.sprite = _soundActiveIsTrue;

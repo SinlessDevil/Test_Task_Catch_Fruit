@@ -37,8 +37,8 @@ Pattern Mediator is a behavioral design pattern that reduces coupling between co
 
 The Mediator makes it easy to modify, extend and reuse individual components because they’re no longer dependent on the dozens of other classes.
 
-![Image alt](https://github.com/SinlessDevil/Test_Task_Catch_Fruit/blob/fixed/Screenshots%20For%20ReadMeFilePatten_Mediator_1.png)
-![Image alt](https://github.com/SinlessDevil/Test_Task_Catch_Fruit/blob/fixed/Screenshots%20For%20ReadMeFilePatten_Mediator_2.png)
+![Image alt](https://github.com/SinlessDevil/Test_Task_Catch_Fruit/blob/fixed/Screenshots%20For%20ReadMeFile/Patten_Mediator_1.png)
+![Image alt](https://github.com/SinlessDevil/Test_Task_Catch_Fruit/blob/fixed/Screenshots%20For%20ReadMeFile/Patten_Mediator_1.png)
 >Factory - Pattern Factory
 
 an ordinary abstract factory,

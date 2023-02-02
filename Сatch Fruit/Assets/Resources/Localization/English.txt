@@ -1,0 +1,10 @@
+changelang	Change Language
+playy	Play
+ext	Exit
+exittomenu	Exit to Main Menu
+restart	Restart
+gameover	GameOver
+youwin	You Win!
+nxtlvl	Next Level
+lvlpassed	Level Passed
+currlvl	Current	Level

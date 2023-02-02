@@ -1,0 +1,10 @@
+﻿changelang	Змінити мову
+playy	Грати
+ext	Вихід
+exittomenu	Вихід в Головне Меню
+restart	Переграти
+gameover	Кінець Гри
+youwin	Перемога!
+nxtlvl	Наступний рівень
+lvlpassed	Рівень пройдений
+currlvl	Поточний рівень
